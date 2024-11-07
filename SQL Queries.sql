@@ -1,10 +1,8 @@
 # Q1: Find different payment methods, number of transactions, and quantity sold by payment method
-'''SQL
-	Select payment_method, count(*) No_of_Transactions, sum(quantity) Quanity_Sold
-from walmart
+Select payment_method, count(*) No_of_Transactions, sum(quantity) Quanity_Sold
+from Walmart
 group by payment_method
 order by Quanity_Sold desc;
-	'''
 
 # Q2: Identify the highest-rated category in each branch
 Select branch, category, rating from (select branch, category, round(avg(rating),1) as rating,
