@@ -1,5 +1,5 @@
 # Q1: Find different payment methods, number of transactions, and quantity sold by payment method
-'''
+'''SQL
 	Select payment_method, count(*) No_of_Transactions, sum(quantity) Quanity_Sold
 from walmart
 group by payment_method
