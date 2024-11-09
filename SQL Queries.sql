@@ -45,11 +45,11 @@ where rnk = 1;
 # Q7: Categorize sales into Morning, Afternoon, and Evening shifts find each the no of shifts and invoices
 select branch,
 case
-	when hour(time(time)) < 12 then 'Morning'
-    when hour(time(time)) > 17 then 'Evening'
-    else 'Afternoon'
-    end as shift,
-    count(*) as no_of_invoices
+when hour(time(time)) < 12 then 'Morning'
+when hour(time(time)) > 17 then 'Evening'
+else 'Afternoon'
+end as shift,
+count(*) as no_of_invoices
 from walmart
 group by 1,2
 order by 1, 3 desc;
