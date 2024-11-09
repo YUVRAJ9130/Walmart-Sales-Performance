@@ -21,7 +21,7 @@ where rnk = 1;
 
 # Q4: Determine the average, minimum, and maximum rating of categories for each city
 select city, category,
-	min(rating) as Min_Rating, max(rating) as Max_Rating, round(avg(rating),2) as Avg_Rating
+min(rating) as Min_Rating, max(rating) as Max_Rating, round(avg(rating),2) as Avg_Rating
 from walmart
 group by 1,2
 order by 1,2;
